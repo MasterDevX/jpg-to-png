@@ -1,8 +1,25 @@
 import os
+import sys
+import platform
 from PIL import Image as img
 
+sysname = platform.system()
 inpath = './In-JPG/'
 outpath = './Out-PNG/'
+
+if sysname == 'Windows':
+    
+    os.system('cls')
+
+elif sysname == 'Linux':
+    
+    os.system('clear')
+    
+else:
+    
+    print('Unsupported OS.')
+    input('Press Enter to exit: ')
+    sys.exit()
 
 for i in os.listdir(inpath):
 
